@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="myPrimaryColor">#EF5350</color>
+    <color name="myPrimaryDarkColor">#F44336</color>
+    <color name="myAccentColor">#F44336</color>
+    <color name="myDrawerBackground">#FFFFFF</color>
+    <color name="myDrawerTextPrimaryColor">#212121</color>
+    <color name="myWindowBackground">#FAFAFA</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="myNavigationColor">#000000</color>
+
+    <drawable name="pressed_gray">#0c000000</drawable>
+    <drawable name="selected_gray">#2c000000</drawable>
 </resources>
