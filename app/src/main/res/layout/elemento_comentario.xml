@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/back_image" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="false"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/rlComentario"
+                android:padding="8dp">
+
+                <com.rave.android.RoundedImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/perfil_autor"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombre_autor"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_marginLeft="8dp"
+                    android:text="Carles Chovi"
+                    android:layout_alignParentTop="true"
+                    android:maxLines="1"
+                    android:layout_toEndOf="@+id/perfil_autor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fecha"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginRight="16dp"
+                    android:text="26/01/2016"
+                    android:layout_alignTop="@+id/nombre_autor"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/texto"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Este festival es la polla"
+                    android:layout_below="@+id/nombre_autor"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/perfil_autor"/>
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

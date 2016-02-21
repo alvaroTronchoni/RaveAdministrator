@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/back_image" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="false"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="#64000000"
+                android:id="@+id/rlFestival">
+
+                <com.rave.android.RoundedImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/logo_festival"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombre_festival"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:layout_below="@+id/logo_festival"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ubicacion_festival"
+                    android:fontFamily="sans-serif-thin"
+                    android:textSize="18sp"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:layout_below="@+id/nombre_festival"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp" />
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:background="#ffebebeb"
+                    android:layout_below="@+id/ubicacion_festival"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp" />
+
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

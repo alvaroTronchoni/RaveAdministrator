@@ -1,0 +1,100 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="2dp"
+    app:cardCornerRadius="2dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:drawablePadding="16dp"
+    android:id="@+id/cvComentarios">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.rave.android.views.FragmentComentarios"
+        android:background="#ffffffff">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_centerInParent="true" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvComentarios"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_above="@+id/texto_comentario" />
+
+        <LinearLayout
+            android:id="@+id/line_divider"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rvComentarios"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/line_divider" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/texto_comentario"
+            android:hint="Escribe un comentario..."
+            android:textColor="@android:color/secondary_text_light"
+            android:textColorHint="@color/myPrimaryDarkColor"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/ic_enviar"
+            android:layout_toLeftOf="@+id/ic_enviar"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send12"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/ic_enviar"
+            android:layout_alignTop="@+id/texto_comentario"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_divider"
+            android:layout_below="@+id/rlTitulo"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rlTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentarios"
+                android:id="@+id/textView2"
+                android:textColor="@color/myPrimaryDarkColor"
+                android:fontFamily="san-serif-bold"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

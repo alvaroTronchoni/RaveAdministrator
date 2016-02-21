@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/web" android:title="Web" android:icon="@drawable/ic_world96"/>
+    <item android:id="@+id/calendario" android:title="Calendario" android:icon="@drawable/ic_connection21"/>
+    <item android:id="@+id/favorito" android:title="Favorito"/>
+</menu>

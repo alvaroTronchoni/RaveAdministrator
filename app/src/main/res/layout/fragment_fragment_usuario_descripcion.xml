@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<com.melnykov.fab.ObservableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sv_descripcion">-->
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divider"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/rlTelefono"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlTelefono"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone370"
+            android:id="@+id/ic_telefono" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teléfono"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_telefono"
+            android:layout_toEndOf="@+id/ic_telefono"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/text_email" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlUbicacion"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_map103_2"
+            android:id="@+id/ic_ubicacion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_ubicacion"
+            android:layout_toEndOf="@+id/ic_ubicacion"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/text_ubicacion" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlGenero"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_headset11_2"
+            android:id="@+id/ic_genero" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Género"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_genero"
+            android:layout_toEndOf="@+id/ic_genero"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/text_genero" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlMensaje"
+        android:padding="8dp"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send12"
+            android:id="@+id/ic_mensaje" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensaje"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ic_mensaje"
+            android:layout_toEndOf="@+id/ic_mensaje"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/text_mensaje" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divider"
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/rlUbicacion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_divider"
+        android:id="@+id/linearLayout6"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/rlGenero"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+<!--</com.melnykov.fab.ObservableScrollView>-->

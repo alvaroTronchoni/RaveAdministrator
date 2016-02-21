@@ -1,4 +1,4 @@
-package com.examen.raveadministrator;
+package com.examen.raveadministrator.activitisYfragments;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,15 +17,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.examen.raveadministrator.R;
 import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.Profile;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -77,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Picasso.with(getApplicationContext()).load(R.drawable.wallpaper_login).fit().centerCrop().into(back_image);
 
-        LoginButton loginButton = (LoginButton) findViewById(R.id.btn_login_facebook);
+        /*LoginButton loginButton = (LoginButton) findViewById(R.id.btn_login_facebook);
         loginButton.setReadPermissions("email");
         loginButton.setReadPermissions("public_profile");
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -111,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onError(FacebookException e) {
                 Toast.makeText(getBaseContext(), "Los datos introducidos no son correctos", Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
@@ -126,8 +121,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the Signup activity
-                //Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                //startActivityForResult(intent, REQUEST_SIGNUP);
+                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
 
