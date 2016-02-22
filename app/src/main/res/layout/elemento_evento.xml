@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/back_image" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="false"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/rlEvento"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombre_evento"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_marginLeft="16dp"
+                    android:text="We The Future Festival"
+                    android:maxLines="1"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/relativeLayout"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ticket_status"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginRight="16dp"
+                    android:text="Disponible"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fecha_evento"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    android:text="7:00PM - We The Future Festival"
+                    android:layout_below="@+id/nombre_evento"
+                    android:layout_alignStart="@+id/nombre_evento"
+                    android:layout_marginTop="8dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeLayout"
+                    android:layout_marginLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sat"
+                    android:textSize="18sp"
+                    android:id="@+id/dia_evento"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feb 13"
+                    android:textSize="12sp"
+                    android:id="@+id/mes_evento"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_below="@+id/dia_evento"
+                    android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ic_evento"
+                        android:layout_below="@+id/mes_evento"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ic_map103_2"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/back_image" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="false"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/rlTopTrack"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/ic_top_track"
+                    android:src="@drawable/ic_expand39"
+                    android:layout_marginLeft="8dp"
+                    android:layout_alignTop="@+id/nombre_top_track"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/popularity_top_track"
+                    android:fontFamily="sans-serif-bold"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginLeft="8dp"
+                    android:layout_below="@+id/ic_top_track"
+                    android:layout_alignStart="@+id/ic_top_track"
+                    android:text="71"
+                    android:layout_alignParentBottom="false" />
+
+
+                <com.rave.android.RoundedImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/image_top_track"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ic_top_track" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombre_top_track"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_marginLeft="8dp"
+                    android:text="On My Mind"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:layout_toEndOf="@+id/image_top_track" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/duracion_top_track"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginRight="16dp"
+                    android:text="3:06"
+                    android:layout_alignTop="@+id/nombre_top_track"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/artistas_top_track"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Don Diablo"
+                    android:layout_below="@+id/nombre_top_track"
+                    android:layout_toEndOf="@+id/image_top_track"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>

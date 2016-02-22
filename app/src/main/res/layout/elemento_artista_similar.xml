@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/back_image" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="false"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/rlArtistaSimilar"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/ic_artista_similar"
+                    android:src="@drawable/ic_expand39"
+                    android:layout_marginLeft="8dp"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/popularity_similar_artist"
+                    android:fontFamily="sans-serif-bold"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginLeft="8dp"
+                    android:layout_below="@+id/ic_artista_similar"
+                    android:layout_alignStart="@+id/ic_artista_similar"
+                    android:text="71"
+                    android:layout_alignParentBottom="false" />
+
+
+                <com.rave.android.RoundedImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/perfil_artista_similar"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ic_artista_similar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombre_artista_similar"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_marginLeft="8dp"
+                    android:text="Alesso"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:layout_toEndOf="@+id/perfil_artista_similar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/match_artista_similar"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Progressive House"
+                    android:layout_below="@+id/nombre_artista_similar"
+                    android:layout_toEndOf="@+id/perfil_artista_similar"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>
