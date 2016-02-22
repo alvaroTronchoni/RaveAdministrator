@@ -119,22 +119,22 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         switch (position) {
             default:
             case 0:
-                /*fragment = new FragmentBuscar();
+                fragment = new FragmentMisFestivales();
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, fragment)
-                        .commit();*/
+                        .commit();
                 break;
             case 1:
-                /*fragment = new FragmentNoticias();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, fragment)
-                        .commit();*/
-                break;
-            case 2:
                 fragment = new FragmentFestivalesClasificacion();
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, fragment)
                         .commit();
+                break;
+            case 2:
+                /*fragment = new FragmentNoticias();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, fragment)
+                        .commit();*/
                 break;
             case 3:
                 fragment = new FragmentUsuario();
