@@ -29,6 +29,7 @@ import android.widget.Toast;
 import com.examen.raveadministrator.ImagePicker;
 import com.examen.raveadministrator.R;
 import com.examen.raveadministrator.RoundedImageView;
+import com.examen.raveadministrator.adaptadores.PagerAdapterUsuario;
 import com.examen.raveadministrator.modelos.Usuario;
 import com.melnykov.fab.FloatingActionButton;
 import com.squareup.picasso.Picasso;
