@@ -51,7 +51,6 @@ public class FragmentEventos extends Fragment {
     private RVEventosAdapter adapter;
     private String nombreArtista;
     private ProgressBar progressBar;
-    private boolean d;
 
 
     /**
