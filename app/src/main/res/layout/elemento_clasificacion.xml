@@ -2,15 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:paddingTop="0dp"
-    android:paddingBottom="0dp">
+    android:layout_height="150dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:id="@+id/back_image" />
+            android:id="@+id/back_image"/>
 
         <com.balysv.materialripple.MaterialRippleLayout
             android:id="@+id/ripple"
@@ -24,49 +22,38 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="16dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:background="#64000000"
-                android:id="@+id/rlFestival">
+                android:id="@+id/rlClasificacion"
+                android:padding="16dp">
 
-                <com.examen.raveadministrator.RoundedImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:id="@+id/logo_festival"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp" />
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:id="@+id/logo_clasificacion"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerHorizontal="true"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/nombre_festival"
+                    android:id="@+id/nombre_clasificacion"
                     android:textSize="20sp"
                     android:textAllCaps="true"
                     android:textStyle="bold"
+                    android:textAlignment="center"
                     android:fontFamily="sans-serif-thin"
                     android:textColor="@color/myTextPrimaryColor"
-                    android:layout_below="@+id/logo_festival"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ubicacion_festival"
-                    android:fontFamily="sans-serif-thin"
-                    android:textSize="18sp"
-                    android:textColor="@color/myTextPrimaryColor"
-                    android:layout_below="@+id/nombre_festival"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp" />
+                    android:layout_below="@+id/logo_clasificacion"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"/>
 
                 <FrameLayout
                     android:layout_width="80dp"
                     android:layout_height="1dp"
                     android:background="#ffebebeb"
-                    android:layout_below="@+id/ubicacion_festival"
+                    android:layout_below="@+id/nombre_clasificacion"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="16dp" />
 
