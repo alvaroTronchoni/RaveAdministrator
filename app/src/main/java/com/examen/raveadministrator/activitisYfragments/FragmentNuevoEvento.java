@@ -169,7 +169,7 @@ public class FragmentNuevoEvento extends Fragment {
             viewPager.setTag(usuario.getId());
         }
 
-        //
+
 
 
 
