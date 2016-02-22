@@ -50,7 +50,7 @@
                     android:layout_alignParentBottom="false" />
 
 
-                <com.rave.android.RoundedImageView
+                <com.examen.raveadministrator.RoundedImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
                     android:id="@+id/perfil_artista"

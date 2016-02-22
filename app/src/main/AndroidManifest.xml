@@ -21,6 +21,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDB7RbwBmr32GuWs1VD4Z1U_-ZtWuvc3Xs" />
+
         <activity android:name=".activitisYfragments.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
