@@ -124,16 +124,16 @@ public class FragmentMisFestivales extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_fragment_festivales, container, false);
+        View v = inflater.inflate(R.layout.fragment_fragment_mis_festivales, container, false);
 
         progressBar = (ProgressBar)v.findViewById(R.id.progress_bar);
 
         Bundle bundle = getArguments();
 
-        if (bundle != null) {
+       /* if (bundle != null) {
             clasificacion = (Clasificacion) bundle.getSerializable("Clasificacion");
             genero = clasificacion.getNombreClasificacion();
-        }
+        }*/
 
         if(genero.equals("Más cercanos")){
             LocationManager mLocationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
