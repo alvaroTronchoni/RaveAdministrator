@@ -152,7 +152,6 @@ public class FragmentMisFestivales extends Fragment {
                         .commit();
             }
         });
-        //
         return v;
     }
 
