@@ -192,20 +192,19 @@ public class LoginActivity extends AppCompatActivity {
 
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
+       if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+           _emailText.setError("introduce una dirección de email válida");
+           valid = false;
+       } else {
+           _emailText.setError(null);
+       }
 
-        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("introduce una dirección de email válida");
-            valid = false;
-        } else {
-            _emailText.setError(null);
-        }
-
-        if (password.isEmpty() || password.length() < 4 || password.length() > 20) {
-            _passwordText.setError("entre 4 y 20 caracteres alfanuméricos");
-            valid = false;
-        } else {
-            _passwordText.setError(null);
-        }
+       if (password.isEmpty() || password.length() < 4 || password.length() > 20) {
+           _passwordText.setError("entre 4 y 20 caracteres alfanuméricos");
+           valid = false;
+       } else {
+           _passwordText.setError(null);
+       }
 
         return valid;
     }
@@ -324,7 +323,7 @@ public class LoginActivity extends AppCompatActivity {
                 String admin = result.get(5);
 
 
-                if(estado.equals("1")){
+                if(estado.equals("1") && admin.equals("1")){
                     onLoginSuccess(id, nombre, correo, claveApi,admin);
                     URL imageURL = null;
                     try {

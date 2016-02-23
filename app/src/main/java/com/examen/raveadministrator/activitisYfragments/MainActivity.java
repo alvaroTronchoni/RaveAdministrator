@@ -92,6 +92,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .build();
 
         handleIntent(getIntent());
+
+        /*MeterEvento m = new MeterEvento();
+        m.execute("");*/
     }
 
     @Override

@@ -13,185 +13,261 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
 
-    <RelativeLayout
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <!-- Nombre Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Nombre"
+                    android:focusable="false" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Genero Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view2"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/input_genero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Genero" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Ubicacion Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view3"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view2"
+                android:layout_alignStart="@+id/view2">
+
+                <EditText
+                    android:id="@+id/input_ubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Ubicacion" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Latitud Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view4"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view3"
+                android:layout_alignStart="@+id/view3">
+
+                <EditText
+                    android:id="@+id/input_latitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Latitud" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Longitud Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view5"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view4"
+                android:layout_alignStart="@+id/view4">
+
+                <EditText
+                    android:id="@+id/input_longitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Longitud"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Descripcion Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view6"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view5"
+                android:layout_alignStart="@+id/view5">
+
+                <EditText
+                    android:id="@+id/input_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Descripcion"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view8"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view6"
+                android:layout_alignStart="@+id/view6">
+
+                <EditText
+                    android:id="@+id/inpt_face"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view9"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view8"
+                android:layout_alignStart="@+id/view6">
+
+                <EditText
+                    android:id="@+id/nput_face"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view10"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view9"
+                android:layout_alignStart="@+id/view6">
+
+                <EditText
+                    android:id="@+id/iput_face"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view11"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view10"
+                android:layout_alignStart="@+id/view6">
+
+                <EditText
+                    android:id="@+id/inpu_face"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view12"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view11"
+                android:layout_alignStart="@+id/view6">
+
+                <EditText
+                    android:id="@+id/input_fac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
 
-        <!-- Nombre Label -->
-        <android.support.design.widget.TextInputLayout
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp">
+            android:layout_height="match_parent"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75"
+            android:layout_weight="1">
 
-            <EditText
-                android:id="@+id/input_name"
+            <Button
+                android:id="@+id/link_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Nombre"
-                android:focusable="false" />
-        </android.support.design.widget.TextInputLayout>
+                android:text="Atras"
+                android:textColor="@color/myTextPrimaryColor"
+                android:background="@color/myDrawerTextPrimaryColor"/>
 
-        <!-- Genero Label -->
-        <android.support.design.widget.TextInputLayout
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view2"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/view"
-            android:layout_centerHorizontal="true">
+            android:layout_height="match_parent"
+            app:mrl_rippleColor="?attr/colorControlHighlight"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleDuration="350"
+            app:mrl_rippleFadeDuration="75"
+            android:layout_weight="1">
 
-            <EditText
-                android:id="@+id/input_genero"
+            <Button
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Genero" />
-        </android.support.design.widget.TextInputLayout>
+                android:padding="12dp"
+                android:text="Siguiente"
+                android:background="@color/myPrimaryColor"/>
 
-        <!-- Ubicacion Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view3"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/view2"
-            android:layout_alignStart="@+id/view2">
+        </com.balysv.materialripple.MaterialRippleLayout>
 
-            <EditText
-                android:id="@+id/input_ubicacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Ubicacion" />
-        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
 
-        <!-- Latitud Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view4"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/view3"
-            android:layout_alignStart="@+id/view3">
-
-            <EditText
-                android:id="@+id/input_latitud"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Latitud" />
-        </android.support.design.widget.TextInputLayout>
-
-        <!-- Longitud Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view5"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/view4"
-            android:layout_alignStart="@+id/view4">
-
-            <EditText
-                android:id="@+id/input_longitud"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Longitud"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <!-- Descripcion Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view6"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/view5"
-            android:layout_alignStart="@+id/view5">
-
-            <EditText
-                android:id="@+id/input_descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Descripcion"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <!-- Facebook Url Label -->
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/view7"
-            android:layout_marginRight="50dp"
-            android:layout_below="@+id/view6"
-            android:layout_alignStart="@+id/view6">
-
-            <EditText
-                android:id="@+id/input_face"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="URL Facebook"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true">
-
-            <com.balysv.materialripple.MaterialRippleLayout
-                android:id="@+id/ripple1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:mrl_rippleColor="?attr/colorControlHighlight"
-                app:mrl_rippleOverlay="true"
-                app:mrl_rippleDuration="350"
-                app:mrl_rippleFadeDuration="75"
-                android:layout_weight="1">
-
-                <Button
-                    android:id="@+id/link_signup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Atras"
-                    android:textColor="@color/myTextPrimaryColor"
-                    android:background="@color/myDrawerTextPrimaryColor"/>
-
-            </com.balysv.materialripple.MaterialRippleLayout>
-
-            <com.balysv.materialripple.MaterialRippleLayout
-                android:id="@+id/ripple2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:mrl_rippleColor="?attr/colorControlHighlight"
-                app:mrl_rippleOverlay="true"
-                app:mrl_rippleDuration="350"
-                app:mrl_rippleFadeDuration="75"
-                android:layout_weight="1">
-
-                <Button
-                    android:id="@+id/btn_login"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:text="Siguiente"
-                    android:background="@color/myPrimaryColor"/>
-
-            </com.balysv.materialripple.MaterialRippleLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
 </RelativeLayout>
