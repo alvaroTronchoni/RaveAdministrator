@@ -89,6 +89,9 @@ public class FragmentFormularioFestival1 extends Fragment {
     private Button btn_cancel;
     private Button btn_acept;
 
+    private String nombre, genero, ubicacion, latitud, longitud, descripcion, face_url, web_url, logo_url,back_url,
+    entradas_url, fecha_inicio, fecha_fin, asistentes,ediciones, instagram_user;
+
 
     /**
      * Use this factory method to create a new instance of
@@ -240,8 +243,9 @@ public class FragmentFormularioFestival1 extends Fragment {
             @Override
             public void onClick(View v) {
                 if(puedo()){
+                    respuestas();
                     MeterEvento meterEvento = new MeterEvento();
-                    meterEvento.execute(respuestas());
+                    meterEvento.execute();
                 }
             }
         });
@@ -260,23 +264,23 @@ public class FragmentFormularioFestival1 extends Fragment {
     }
 
     public String[] respuestas(){
-        String respuesta[] = new String[16];
-        respuesta[0] = edit_nombre.getText().toString();
-        respuesta[1] = edit_genero.getText().toString();
-        respuesta[2] = edit_ubicacion.getText().toString();
-        respuesta[3] = edit_latitud.getText().toString();
-        respuesta[4] = edit_longitud.getText().toString();
-        respuesta[5] = edit_descripcion.getText().toString();
-        respuesta[6] = edit_face_url.getText().toString();
-        respuesta[7] = edit_web_url.getText().toString();
-        respuesta[8] = edit_logo_url.getText().toString();
-        respuesta[9] = edit_back_url.getText().toString();
-        respuesta[10] = edit_instagram_user.getText().toString();
-        respuesta[11] = edit_entradas_url.getText().toString();
-        respuesta[12] = edit_fecha_inicio.getText().toString();
-        respuesta[13] = edit_fecha_fin.getText().toString();
-        respuesta[14] = edit_asistentes.getText().toString();
-        respuesta[15] = edit_ediciones.getText().toString();
+        String[] respuesta = new String[16];
+        nombre = edit_nombre.getText().toString();
+        genero = edit_genero.getText().toString();
+        ubicacion = edit_ubicacion.getText().toString();
+        latitud = edit_latitud.getText().toString();
+        longitud = edit_longitud.getText().toString();
+        descripcion = edit_descripcion.getText().toString();
+        face_url = edit_face_url.getText().toString();
+        web_url = edit_web_url.getText().toString();
+        logo_url = edit_logo_url.getText().toString();
+        back_url = edit_back_url.getText().toString();
+        instagram_user = edit_instagram_user.getText().toString();
+        entradas_url = edit_entradas_url.getText().toString();
+        fecha_inicio = edit_fecha_inicio.getText().toString();
+        fecha_fin = edit_fecha_fin.getText().toString();
+        asistentes = edit_asistentes.getText().toString();
+        ediciones = edit_ediciones.getText().toString();
 
         return respuesta;
     }
@@ -385,10 +389,10 @@ public class FragmentFormularioFestival1 extends Fragment {
         return valid;
     }
 
-    public class MeterEvento extends AsyncTask<String[], Void, String> {
+    public class MeterEvento extends AsyncTask<Void, Void, String> {
 
         @Override
-        protected String doInBackground(String[]... params) {
+        protected String doInBackground(Void... params) {
 
             StringBuilder favouriteDataJsonStr = new StringBuilder();
 
@@ -409,23 +413,23 @@ public class FragmentFormularioFestival1 extends Fragment {
 
                 //Create JSONObject here
                 JSONObject jsonParam = new JSONObject();
-                jsonParam.put("nombreFestival", params[0]);
+                jsonParam.put("nombreFestival", nombre);
                 jsonParam.put("idAdministrador", idAdmin);
-                jsonParam.put("generoFestival", params[1]);
-                jsonParam.put("ubicacionFestival", params[2]);
-                jsonParam.put("latitudFestival", params[3]);
-                jsonParam.put("longitudFestival", params[4]);
-                jsonParam.put("descripcionFestival", params[5]);
-                jsonParam.put("facebookUrl", params[6]);
-                jsonParam.put("webUrl", params[7]);
-                jsonParam.put("logoUrl", params[8]);
-                jsonParam.put("backUrl", params[9]);
-                jsonParam.put("instagramUser", params[10]);
-                jsonParam.put("entradasUrl", params[11]);
-                jsonParam.put("fechaInicio", params[12]);
-                jsonParam.put("fechaFin", params[13]);
-                jsonParam.put("asistentesFestival", params[14]);
-                jsonParam.put("edicionesFestival", params[15]);
+                jsonParam.put("generoFestival", genero);
+                jsonParam.put("ubicacionFestival", ubicacion);
+                jsonParam.put("latitudFestival", latitud);
+                jsonParam.put("longitudFestival", longitud);
+                jsonParam.put("descripcionFestival", descripcion);
+                jsonParam.put("facebookUrl", face_url);
+                jsonParam.put("webUrl", web_url);
+                jsonParam.put("logoUrl", logo_url);
+                jsonParam.put("backUrl", back_url);
+                jsonParam.put("instagramUser", instagram_user);
+                jsonParam.put("entradasUrl", entradas_url);
+                jsonParam.put("fechaInicio", fecha_inicio);
+                jsonParam.put("fechaFin", fecha_fin);
+                jsonParam.put("asistentesFestival", asistentes);
+                jsonParam.put("edicionesFestival", ediciones);
 
                 OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
                 out.write(jsonParam.toString());
@@ -465,6 +469,11 @@ public class FragmentFormularioFestival1 extends Fragment {
         @Override
         protected void onPostExecute(String result) {
             Toast.makeText(getActivity().getApplicationContext(), "Evento Registrado", Toast.LENGTH_LONG).show();
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            Fragment fragment = new FragmentMisFestivales();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, fragment)
+                    .commit();
 
         }
     }
