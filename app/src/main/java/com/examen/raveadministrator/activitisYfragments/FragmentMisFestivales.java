@@ -12,6 +12,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -25,6 +26,7 @@ import com.examen.raveadministrator.R;
 import com.examen.raveadministrator.adaptadores.RVFestivalesAdapter;
 import com.examen.raveadministrator.modelos.Clasificacion;
 import com.examen.raveadministrator.modelos.Festival;
+import com.melnykov.fab.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -65,6 +67,8 @@ public class FragmentMisFestivales extends Fragment {
     double latitude;
     double longitude;
     private static final String PREFERENCIAS = "Preferencias";
+
+    FloatingActionButton FABMas;
 
     /**
      * Use this factory method to create a new instance of
@@ -133,13 +137,21 @@ public class FragmentMisFestivales extends Fragment {
 
         Bundle bundle = getArguments();
 
-       /* if (bundle != null) {
-            clasificacion = (Clasificacion) bundle.getSerializable("Clasificacion");
-            genero = clasificacion.getNombreClasificacion();
-        }*/
-
         FetchFestivalsDataTask fetchFestivalsDataTask = new FetchFestivalsDataTask();
         fetchFestivalsDataTask.execute(idAdmin);
+
+        FABMas = (FloatingActionButton)v.findViewById(R.id.FABMas_nuevo_evento);
+
+        FABMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                Fragment fragment = new FragmentFormularioFestival1();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, fragment)
+                        .commit();
+            }
+        });
 
         return v;
     }

@@ -66,6 +66,7 @@ public class FragmentFormularioFestival1 extends Fragment {
     private RVClasificacionesAdapter adapter;
     private static final String PREFERENCIAS = "Preferencias";
 
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
