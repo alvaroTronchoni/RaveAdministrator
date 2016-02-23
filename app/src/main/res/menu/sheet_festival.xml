@@ -6,4 +6,5 @@
     <item android:id="@+id/favorito" android:title="Favorito"/>
     <item android:id="@+id/asistir" android:title="Asistir" android:icon="@drawable/ic_check52_red"/>
     <item android:id="@+id/amigos" android:title="Amigos" android:icon="@drawable/ic_user157"/>
+    <item android:id="@+id/añadirAsistentes" android:title="Añadir Asistentes" android:icon="@drawable/ic_add184"/>
 </menu>

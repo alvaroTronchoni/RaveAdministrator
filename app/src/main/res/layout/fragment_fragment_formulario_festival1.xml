@@ -163,7 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="URL Web"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -180,7 +180,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="URL Logo"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -197,7 +197,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="URL Background"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -214,7 +214,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="Instagram User"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -231,7 +231,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="URL Entradas"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -248,7 +248,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="Fecha Inicio"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -265,7 +265,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="Fecha Fin"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -282,7 +282,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="Asistentes Festival"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Facebook Url Label -->
@@ -299,7 +299,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="URL Facebook"/>
+                    android:hint="Ediciones Festival"/>
             </android.support.design.widget.TextInputLayout>
         </RelativeLayout>
     </ScrollView>
@@ -324,7 +324,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/link_signup"
+                android:id="@+id/btnAtras"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Atras"
@@ -344,7 +344,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btnAceptar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
