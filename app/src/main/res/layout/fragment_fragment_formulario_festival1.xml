@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
         android:layout_above="@+id/linearLayout"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,8 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="Nombre"
-                    android:focusable="false" />
+                    android:hint="Nombre"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Genero Label -->
