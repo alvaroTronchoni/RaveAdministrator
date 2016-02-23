@@ -41,7 +41,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks, NavigationDrawerCallbacks/*, FragmentBuscar.OnFragmentInteractionListener, FragmentNoticias.OnFragmentInteractionListener*/, FragmentFestivales.OnFragmentInteractionListener,FragmentMisFestivales.OnFragmentInteractionListener, FragmentUsuario.OnFragmentInteractionListener /*,FragmentConfiguracion.OnFragmentInteractionListener*/, FragmentFestival.OnFragmentInteractionListener, FragmentFestivalDescripcion.OnFragmentInteractionListener, FragmentFestivalArtistas.OnFragmentInteractionListener, FragmentFestivalFotos.OnFragmentInteractionListener, FragmentArtista.OnFragmentInteractionListener, FragmentArtistaDescripcion.OnFragmentInteractionListener, FragmentArtistaMusica.OnFragmentInteractionListener, FragmentArtistaArtistasSimilares.OnFragmentInteractionListener, FragmentArtistaFotos.OnFragmentInteractionListener, FragmentComentarios.OnFragmentInteractionListener, FragmentEventos.OnFragmentInteractionListener /*,FragmentNoticia.OnFragmentInteractionListener*/, FragmentFestivalesClasificacion.OnFragmentInteractionListener, FragmentUsuarioDescripcion.OnFragmentInteractionListener, FragmentUsuarioAmigos.OnFragmentInteractionListener, FragmentUsuarioFavoritos.OnFragmentInteractionListener, FragmentUsuarioCalendario.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks, NavigationDrawerCallbacks/*, FragmentBuscar.OnFragmentInteractionListener*/, FragmentNoticias.OnFragmentInteractionListener, FragmentFestivales.OnFragmentInteractionListener,FragmentMisFestivales.OnFragmentInteractionListener, FragmentUsuario.OnFragmentInteractionListener /*,FragmentConfiguracion.OnFragmentInteractionListener*/, FragmentFestival.OnFragmentInteractionListener, FragmentFestivalDescripcion.OnFragmentInteractionListener, FragmentFestivalArtistas.OnFragmentInteractionListener, FragmentFestivalFotos.OnFragmentInteractionListener, FragmentArtista.OnFragmentInteractionListener, FragmentArtistaDescripcion.OnFragmentInteractionListener, FragmentArtistaMusica.OnFragmentInteractionListener, FragmentArtistaArtistasSimilares.OnFragmentInteractionListener, FragmentArtistaFotos.OnFragmentInteractionListener, FragmentComentarios.OnFragmentInteractionListener, FragmentEventos.OnFragmentInteractionListener ,FragmentNoticia.OnFragmentInteractionListener, FragmentFestivalesClasificacion.OnFragmentInteractionListener, FragmentUsuarioDescripcion.OnFragmentInteractionListener, FragmentUsuarioAmigos.OnFragmentInteractionListener, FragmentUsuarioFavoritos.OnFragmentInteractionListener, FragmentUsuarioCalendario.OnFragmentInteractionListener{
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -134,10 +134,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         .commit();
                 break;
             case 2:
-                /*fragment = new FragmentNoticias();
+                fragment = new FragmentNoticias();
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, fragment)
-                        .commit();*/
+                        .commit();
                 break;
             case 3:
                 fragment = new FragmentUsuario();

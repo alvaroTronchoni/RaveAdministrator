@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mrl_rippleColor="?attr/colorControlHighlight"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleFadeDuration="75"
+        app:mrl_rippleOverlay="false">
+
+        <RelativeLayout
+            android:id="@+id/rlNoticia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#64000000"
+                android:padding="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/titulo_noticia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="false"
+                    android:fontFamily="sans-serif-bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="16dp" />
+
+                <TextView
+                    android:id="@+id/contenido_noticia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/titulo_noticia"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</RelativeLayout>
