@@ -60,7 +60,6 @@
                     android:id="@+id/input_generoFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
                     android:hint="Genero" />
             </android.support.design.widget.TextInputLayout>
 
