@@ -252,6 +252,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     SharedPreferences.Editor editor = getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE).edit();
                     editor.putBoolean("autenticado", false);
                     editor.apply();
+                    Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                    startActivity(i);
+                    finish();
                     break;
 
                 case DialogInterface.BUTTON_NEGATIVE:
@@ -328,6 +331,93 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             JSONObject rootObject = new JSONObject(favouriteDataJsonStr);
 
             return rootObject.getString("estado");
+        }
+
+
+        @Override
+        protected void onPostExecute(String result) {
+
+            if(result!=null){
+
+                //Toast.makeText(getApplicationContext(), "Imagen guardada correctamente", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    public class MeterEvento extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            StringBuilder favouriteDataJsonStr = new StringBuilder();
+
+            String http = "http://ubuntu.westeurope.cloudapp.azure.com/ApiRAVE/v1/festivales";
+
+            HttpURLConnection urlConnection=null;
+            try {
+
+
+                URL url = new URL(http);
+                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setDoOutput(true);
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setUseCaches(false);
+                urlConnection.setRequestProperty("Content-Type", "application/json");
+                urlConnection.setRequestProperty("Authorization", claveApi);
+                urlConnection.connect();
+
+                //Create JSONObject here
+                JSONObject jsonParam = new JSONObject();
+                jsonParam.put("nombreFestival", "Mad Cool Festival");
+                jsonParam.put("idAdministrador", "8");
+                jsonParam.put("generoFestival", "Indie, Rock");
+                jsonParam.put("ubicacionFestival", "Madrid");
+                jsonParam.put("latitudFestival", "40.4378698");
+                jsonParam.put("longitudFestival", "-3.8196207");
+                jsonParam.put("descripcionFestival", "El Mad Cool Festival se celebrará en un recinto ubicado en la Caja Mágica de Madrid del 16 al 18 de junio de 2016.");
+                jsonParam.put("facebookUrl", "https://www.facebook.com/madcoolfestival/");
+                jsonParam.put("webUrl", "http://madcoolfestival.es/");
+                jsonParam.put("logoUrl", "http://static.guiaocio.com/var/guiadelocio.com/storage/images/conciertos/madrid/madrid/mad-cool-festival-2016/27885014-10-esl-ES/mad-cool-festival-2016.jpg");
+                jsonParam.put("backUrl", "http://5www.ecestaticos.com/imagestatic/clipping/587/acd/85c/587acd85c091f684137c7cd35a4dbe9d/bienvenidos-al-mad-cool-el-nuevo-macrofestival-musical-de-madrid.jpg?mtime=1453892094");
+                jsonParam.put("instagramUser", "madcoolfestival");
+                jsonParam.put("entradasUrl", "http://madcoolfestival.es/entradas/");
+                jsonParam.put("fechaInicio", "2016-06-16");
+                jsonParam.put("fechaFin", "2016-06-18");
+                jsonParam.put("asistentesFestival", "40.000");
+                jsonParam.put("edicionesFestival", "1");
+
+                OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
+                out.write(jsonParam.toString());
+                out.close();
+
+                int HttpResult = urlConnection.getResponseCode();
+                if(HttpResult == HttpURLConnection.HTTP_OK){
+                    BufferedReader br = new BufferedReader(new InputStreamReader(
+                            urlConnection.getInputStream(),"utf-8"));
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        favouriteDataJsonStr.append(line + "\n");
+                    }
+                    br.close();
+
+                }else{
+                    System.out.println(urlConnection.getResponseMessage());
+                }
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }finally{
+                if(urlConnection!=null)
+                    urlConnection.disconnect();
+            }
+
+            return null;//getFavouriteDataFromJson(favouriteDataJsonStr.toString());
+
         }
 
 

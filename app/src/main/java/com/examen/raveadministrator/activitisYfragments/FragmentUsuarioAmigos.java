@@ -294,7 +294,7 @@ public class FragmentUsuarioAmigos extends Fragment {
 
                 for(String userStr: result){
                     String[] userArray = userStr.split("\\*");
-                    usuarios.add(new Usuario(userArray[0], userArray[1], userArray[2], userArray[3]));
+                    usuarios.add(new Usuario(userArray[0], userArray[1], userArray[2], userArray[3],"0"));
                     adapter.notifyDataSetChanged();
                 }
             }

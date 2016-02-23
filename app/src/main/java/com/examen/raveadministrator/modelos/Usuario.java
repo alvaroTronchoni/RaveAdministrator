@@ -9,12 +9,14 @@ public class Usuario implements Serializable {
     private String correo;
     private String claveApi;
     private String perfilUsuario;
+    private String admin;
 
-    public Usuario(String id, String nombre, String correo, String perfilUsuario) {
+    public Usuario(String id, String nombre, String correo, String perfilUsuario, String admin) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.perfilUsuario = perfilUsuario;
+        this.admin = admin;
     }
 
     public Usuario(String id, String perfilUsuario) {

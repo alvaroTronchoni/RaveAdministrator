@@ -166,7 +166,7 @@ public class LoginActivity extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
-    private void onLoginSuccess(String id, String nombre, String correo, String claveApi) {
+    private void onLoginSuccess(String id, String nombre, String correo, String claveApi, String admin) {
         _loginButton.setEnabled(true);
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         SharedPreferences.Editor editor = getSharedPreferences(PREFERENCIAS, MODE_PRIVATE).edit();
@@ -175,6 +175,7 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("correo", correo);
         editor.putString("claveApi", claveApi);
         editor.putBoolean("autenticado", true);
+        editor.putString("admin",admin);
         editor.apply();
         startActivity(intent);
         finish();
@@ -297,11 +298,14 @@ public class LoginActivity extends AppCompatActivity {
 
             String claveApi = usuarioObject.getString("claveApi");
 
+            String admin = usuarioObject.getString("administrador");
+
             arrayResultados.add(estado);
             arrayResultados.add(id);
             arrayResultados.add(nombre);
             arrayResultados.add(correo);
             arrayResultados.add(claveApi);
+            arrayResultados.add(admin);
 
             return arrayResultados;
         }
@@ -317,9 +321,11 @@ public class LoginActivity extends AppCompatActivity {
                 String nombre = result.get(2);
                 String correo = result.get(3);
                 String claveApi = result.get(4);
+                String admin = result.get(5);
+
 
                 if(estado.equals("1")){
-                    onLoginSuccess(id, nombre, correo, claveApi);
+                    onLoginSuccess(id, nombre, correo, claveApi,admin);
                     URL imageURL = null;
                     try {
                         if(profile != null){

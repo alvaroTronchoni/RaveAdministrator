@@ -60,7 +60,8 @@ public class FragmentMisFestivales extends Fragment {
     private ProgressBar progressBar;
     private String claveApi;
     private Clasificacion clasificacion;
-    private String genero;
+    private String admin;
+    private String idAdmin;
     double latitude;
     double longitude;
     private static final String PREFERENCIAS = "Preferencias";
@@ -111,6 +112,8 @@ public class FragmentMisFestivales extends Fragment {
 
         SharedPreferences prefs = getActivity().getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
         claveApi = prefs.getString("claveApi", "");
+        admin = prefs.getString("admin","");
+        idAdmin = prefs.getString("id","");
     }
 
     @Override
@@ -135,13 +138,8 @@ public class FragmentMisFestivales extends Fragment {
             genero = clasificacion.getNombreClasificacion();
         }*/
 
-        if(genero.equals("Más cercanos")){
-            LocationManager mLocationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-            mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, mLocationListener);
-        }else{
-            FetchFestivalsDataTask fetchFestivalsDataTask = new FetchFestivalsDataTask();
-            fetchFestivalsDataTask.execute(genero);
-        }
+        FetchFestivalsDataTask fetchFestivalsDataTask = new FetchFestivalsDataTask();
+        fetchFestivalsDataTask.execute(idAdmin);
 
         return v;
     }
@@ -214,7 +212,7 @@ public class FragmentMisFestivales extends Fragment {
 
             try {
                 // Construct the URL for the Instagram query
-                final String FESTIVALS_BASE_URL = "http://ubuntu.westeurope.cloudapp.azure.com/ApiRAVE/v1/festivales?genero="+params[0];
+                final String FESTIVALS_BASE_URL = "http://ubuntu.westeurope.cloudapp.azure.com/ApiRAVE/v1/festivales?idAdministrador=" +params[0];
 
                 Uri builtUri = Uri.parse(FESTIVALS_BASE_URL);
 

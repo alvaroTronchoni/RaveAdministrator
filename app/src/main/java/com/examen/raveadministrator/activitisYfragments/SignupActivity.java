@@ -164,6 +164,7 @@ public class SignupActivity extends AppCompatActivity {
                 jsonParam.put("nombre", params[0]);
                 jsonParam.put("correo", params[1]);
                 jsonParam.put("contrasena", params[2]);
+                jsonParam.put("administrador", "1");
                 OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
                 out.write(jsonParam.toString());
                 out.close();
