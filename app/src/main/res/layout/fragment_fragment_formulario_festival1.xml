@@ -38,7 +38,7 @@
                 android:layout_marginRight="50dp">
 
                 <EditText
-                    android:id="@+id/input_name"
+                    android:id="@+id/input_nombreFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -57,7 +57,7 @@
                 android:layout_centerHorizontal="true">
 
                 <EditText
-                    android:id="@+id/input_genero"
+                    android:id="@+id/input_generoFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -74,7 +74,7 @@
                 android:layout_alignStart="@+id/view2">
 
                 <EditText
-                    android:id="@+id/input_ubicacion"
+                    android:id="@+id/input_ubicacionFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -91,7 +91,7 @@
                 android:layout_alignStart="@+id/view3">
 
                 <EditText
-                    android:id="@+id/input_latitud"
+                    android:id="@+id/input_latitudFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -108,7 +108,7 @@
                 android:layout_alignStart="@+id/view4">
 
                 <EditText
-                    android:id="@+id/input_longitud"
+                    android:id="@+id/input_longitudFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -125,7 +125,7 @@
                 android:layout_alignStart="@+id/view5">
 
                 <EditText
-                    android:id="@+id/input_descripcion"
+                    android:id="@+id/input_descripcionFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -136,13 +136,30 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/view8"
+                android:id="@+id/view7"
                 android:layout_marginRight="50dp"
                 android:layout_below="@+id/view6"
                 android:layout_alignStart="@+id/view6">
 
                 <EditText
-                    android:id="@+id/inpt_face"
+                    android:id="@+id/input_facebookUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view8"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view7"
+                android:layout_alignStart="@+id/view7">
+
+                <EditText
+                    android:id="@+id/input_webUrl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -156,10 +173,10 @@
                 android:id="@+id/view9"
                 android:layout_marginRight="50dp"
                 android:layout_below="@+id/view8"
-                android:layout_alignStart="@+id/view6">
+                android:layout_alignStart="@+id/view8">
 
                 <EditText
-                    android:id="@+id/nput_face"
+                    android:id="@+id/input_logoUrl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -173,10 +190,10 @@
                 android:id="@+id/view10"
                 android:layout_marginRight="50dp"
                 android:layout_below="@+id/view9"
-                android:layout_alignStart="@+id/view6">
+                android:layout_alignStart="@+id/view9">
 
                 <EditText
-                    android:id="@+id/iput_face"
+                    android:id="@+id/input_backUrl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -190,10 +207,10 @@
                 android:id="@+id/view11"
                 android:layout_marginRight="50dp"
                 android:layout_below="@+id/view10"
-                android:layout_alignStart="@+id/view6">
+                android:layout_alignStart="@+id/view10">
 
                 <EditText
-                    android:id="@+id/inpu_face"
+                    android:id="@+id/input_instagramUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -207,10 +224,78 @@
                 android:id="@+id/view12"
                 android:layout_marginRight="50dp"
                 android:layout_below="@+id/view11"
-                android:layout_alignStart="@+id/view6">
+                android:layout_alignStart="@+id/view11">
 
                 <EditText
-                    android:id="@+id/input_fac"
+                    android:id="@+id/input_entradasUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view13"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view12"
+                android:layout_alignStart="@+id/view12">
+
+                <EditText
+                    android:id="@+id/input_fechaInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view14"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view13"
+                android:layout_alignStart="@+id/view13">
+
+                <EditText
+                    android:id="@+id/input_fechaFin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view15"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view14"
+                android:layout_alignStart="@+id/view14">
+
+                <EditText
+                    android:id="@+id/input_asistentesFestival"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="URL Facebook"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Facebook Url Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view16"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/view15"
+                android:layout_alignStart="@+id/view15">
+
+                <EditText
+                    android:id="@+id/input_edicionesFestival"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
