@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -66,6 +67,7 @@ public class FragmentFormularioFestival1 extends Fragment {
     private RVClasificacionesAdapter adapter;
     private static final String PREFERENCIAS = "Preferencias";
     private String claveApi;
+    private String idAdmin;
 
     private EditText edit_nombre;
     private EditText edit_genero;
@@ -123,6 +125,7 @@ public class FragmentFormularioFestival1 extends Fragment {
 
         SharedPreferences prefs = getActivity().getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
         claveApi = prefs.getString("claveApi", "");
+        idAdmin = prefs.getString("id","");
 
 
        //((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("FESTIVALES");
@@ -156,6 +159,8 @@ public class FragmentFormularioFestival1 extends Fragment {
         ImageView back_image = (ImageView) v.findViewById(R.id.back_image);
         Picasso.with(getActivity().getApplicationContext()).load(R.drawable.wallpaper_login).fit().centerCrop().into(back_image);
         //ProgressBar progressBar = (ProgressBar) v.findViewById(R.id.progress_bar);
+
+        recogerVariables(v);
 
         return v;
     }
@@ -235,8 +240,20 @@ public class FragmentFormularioFestival1 extends Fragment {
             @Override
             public void onClick(View v) {
                 if(puedo()){
-
+                    MeterEvento meterEvento = new MeterEvento();
+                    meterEvento.execute(respuestas());
                 }
+            }
+        });
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                Fragment fragment = new FragmentMisFestivales();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, fragment)
+                        .commit();
             }
         });
 
@@ -392,23 +409,23 @@ public class FragmentFormularioFestival1 extends Fragment {
 
                 //Create JSONObject here
                 JSONObject jsonParam = new JSONObject();
-                jsonParam.put("nombreFestival", "Mad Cool Festival");
-                jsonParam.put("idAdministrador", "8");
-                jsonParam.put("generoFestival", "Indie, Rock");
-                jsonParam.put("ubicacionFestival", "Madrid");
-                jsonParam.put("latitudFestival", "40.4378698");
-                jsonParam.put("longitudFestival", "-3.8196207");
-                jsonParam.put("descripcionFestival", "El Mad Cool Festival se celebrará en un recinto ubicado en la Caja Mágica de Madrid del 16 al 18 de junio de 2016.");
-                jsonParam.put("facebookUrl", "https://www.facebook.com/madcoolfestival/");
-                jsonParam.put("webUrl", "http://madcoolfestival.es/");
-                jsonParam.put("logoUrl", "http://static.guiaocio.com/var/guiadelocio.com/storage/images/conciertos/madrid/madrid/mad-cool-festival-2016/27885014-10-esl-ES/mad-cool-festival-2016.jpg");
-                jsonParam.put("backUrl", "http://5www.ecestaticos.com/imagestatic/clipping/587/acd/85c/587acd85c091f684137c7cd35a4dbe9d/bienvenidos-al-mad-cool-el-nuevo-macrofestival-musical-de-madrid.jpg?mtime=1453892094");
-                jsonParam.put("instagramUser", "madcoolfestival");
-                jsonParam.put("entradasUrl", "http://madcoolfestival.es/entradas/");
-                jsonParam.put("fechaInicio", "2016-06-16");
-                jsonParam.put("fechaFin", "2016-06-18");
-                jsonParam.put("asistentesFestival", "40.000");
-                jsonParam.put("edicionesFestival", "1");
+                jsonParam.put("nombreFestival", params[0]);
+                jsonParam.put("idAdministrador", idAdmin);
+                jsonParam.put("generoFestival", params[1]);
+                jsonParam.put("ubicacionFestival", params[2]);
+                jsonParam.put("latitudFestival", params[3]);
+                jsonParam.put("longitudFestival", params[4]);
+                jsonParam.put("descripcionFestival", params[5]);
+                jsonParam.put("facebookUrl", params[6]);
+                jsonParam.put("webUrl", params[7]);
+                jsonParam.put("logoUrl", params[8]);
+                jsonParam.put("backUrl", params[9]);
+                jsonParam.put("instagramUser", params[10]);
+                jsonParam.put("entradasUrl", params[11]);
+                jsonParam.put("fechaInicio", params[12]);
+                jsonParam.put("fechaFin", params[13]);
+                jsonParam.put("asistentesFestival", params[14]);
+                jsonParam.put("edicionesFestival", params[15]);
 
                 OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
                 out.write(jsonParam.toString());
@@ -447,11 +464,8 @@ public class FragmentFormularioFestival1 extends Fragment {
 
         @Override
         protected void onPostExecute(String result) {
+            Toast.makeText(getActivity().getApplicationContext(), "Evento Registrado", Toast.LENGTH_LONG).show();
 
-            if(result!=null){
-
-                //Toast.makeText(getApplicationContext(), "Imagen guardada correctamente", Toast.LENGTH_LONG).show();
-            }
         }
     }
 }
